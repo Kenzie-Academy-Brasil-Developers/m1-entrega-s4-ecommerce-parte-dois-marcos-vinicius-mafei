@@ -11,6 +11,12 @@
 body{
     font-family: 'Inter', sans-serif;
 }
+h3{
+    color: var(--grey100);
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 15px;
+}
 img{
     height: 140px;
 }
@@ -23,6 +29,9 @@ figure {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.displayNone{
+    display: none !important;
 }
 /* Geral */
 
@@ -116,8 +125,9 @@ aside .carrinho {
     flex-direction: column;
     align-items: center;
 }
-aside .carrinho button{
+aside button.btn--carrinho{
     margin-top: 10px;
+    margin-bottom: 30px;
     width: 296px;
     height: 50px;
     border: 3px solid transparent;
@@ -130,7 +140,7 @@ aside .carrinho button{
     -o-transition: border 0.4s 0s ease-in-out;
     transition: border 0.4s 0s ease-in-out; 
 }
-aside .carrinho button:hover{
+aside button.btn--carrinho:hover{
     border: 3px solid var(--grey100);
     -webkit-transition: border 0.4s 0s ease-in-out;
     -moz-transition: border 0.4s 0s ease-in-out;
@@ -138,14 +148,79 @@ aside .carrinho button:hover{
     transition: border 0.4s 0s ease-in-out; 
     cursor: pointer;
 }
-aside .carrinho div{
+aside .carrinho div.carrinho--vazio{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 296px;
     height: 250px;
-    margin-bottom: 30px;
     background-color: var(--grey0)
+}
+aside .carrinho div.novo--carrinho{
+    width: 296px;
+    background-color: var(--grey0)
+}
+aside .carrinho div.carrinho--container{
+    width:275px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+aside .carrinho div.carrinho--card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width: 273px;
+    height:80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+aside .carrinho div.carrinho--card figure{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+aside .carrinho div.carrinho--card figure img{
+    width: 75px;
+    height: 53px;
+}
+aside .carrinho div.novo--carrinho h3{
+    margin-left: 0;
+    font-size: 14px;
+}
+aside .carrinho div.novo--carrinho .remover{
+    font-size:12px;
+    color: var(--grey50);
+}
+aside .carrinho div.novo--carrinho p{
+    font-weight: normal;
+    font-size:16px;
+    color: var(--grey50);
+}
+aside .carrinho div.novo--carrinho .preço{
+    color: var(--primary);
+    font-weight: bold;
+    font-size:12px;
+}
+aside .carrinho div.info--carrinho{
+    background-color: var(--grey100); ;
+    width: 296px;
+    height: 126px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color:#fff;
+    font-size: 16px;
+    font-weight:500;
+    padding-left: 17px;
+    padding-right: 21px;
+    padding-top:30px;
+}
+aside .carrinho div.info--carrinho p{
+    margin-bottom: 32px;
 }
 aside .carrinho h2{
     margin-top: 118px;
@@ -223,12 +298,6 @@ main section .item--box button:hover{
     -moz-transition: padding 0.4s 0s ease-in-out;
     -o-transition: padding 0.4s 0s ease-in-out;
     transition: padding 0.4s 0s ease-in-out;
-}
-main section .item--box h3{
-    color: var(--grey100);
-    font-weight: bold;
-    font-size: 18px;
-    margin-left: 15px;
 }
 main section .item--box p{
     font-weight: normal;
@@ -313,12 +382,19 @@ main section .item--box.last {
     aside{
         margin-right: 115px;
     }
-    aside .carrinho button{
+    aside button.btn--carrinho{
         width: 350px;
+        margin-bottom: 0;
     }
-    aside .carrinho div{
+    aside .carrinho div.carrinho--vazio{
         width: 350px;
         height: 347px;
+    }
+    aside .carrinho div.novo--carrinho{
+        width: 350px;
+    }
+    aside .carrinho div.info--carrinho{
+        width: 350px
     }
     main section.produtos{
         height: 2500px;
