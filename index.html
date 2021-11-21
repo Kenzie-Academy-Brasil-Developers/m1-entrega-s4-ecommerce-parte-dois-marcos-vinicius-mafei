@@ -16,98 +16,44 @@
         <h1>Weartake</h1>
         <nav>
             <ul>
-                <li class="first">Todos</li>
-                <li>Acessórios</li>
-                <li>Calçados</li>
-                <li class="last">Camisetas</li>
+                <li class="first filtra">Todos</li>
+                <li class="filtra">Acessórios</li>
+                <li class="filtra">Calçados</li>
+                <li class="last filtra">Camisetas</li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <aside>
-            <form action="#">
+            <form onsubmit="return false">
                 <label for="pesquisa">pesquisa</label>
                 <input name="pesquisa" type="text" placeholder="Digite aqui sua pesquisa">
-                <button type="submit">Pesquisar</button>
+                <button class='btn--primary'>Pesquisar</button>
             </form>
+            <button class="btn--carrinho">Carrinho de compras</button>
             <section class="carrinho">
-                <button>Carrinho de compras</button>
-                <div>
+                <div  id = 'atualizaCarrinho'class="carrinho--vazio">
                     <h2>Carrinho vazio</h2>
                     <small class="botao--adicionar">Adicione itens</small>
+                </div>
+                <div class="info--carrinho displayNone">
+                    <div>
+                        <p>Quantidade:</p>
+                        <p id = 'quantidade'></p>
+                    </div>
+                    <div>
+                        <p>Total:</p>
+                        <p id = 'total'></p>
+                    </div>
                 </div>
             </section>
         </aside>
         <main>
            <section class="produtos">
-                <div class = "item--box">
-                    <figure>
-                        <img src="assets/jaquetaLeve.png" alt="Lightweight Jacket">
-                        <figcaption>Imagem de uma jaqueta leve</figcaption>
-                    </figure>
-                    <button>Camisetas</button>
-                    <h3>Lightweight Jacket</h3>
-                    <p class="description">Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
-                    <p class="preço">R&dollar;100.00</p>
-                    <small class="botao--adicionar">Adicionar ao carrinho</small>
-                </div>
-                <div class = "item--box">
-                    <figure>
-                        <img src="assets/gorro.png" alt="Black Hat">
-                        <figcaption>Imagem de um gorro</figcaption>
-                    </figure>
-                    <button>Acessórios</button>
-                    <h3>Black Hat</h3>
-                    <p class="description">O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...</p>
-                    <p class="preço">R&dollar;100.00</p>
-                    <small class="botao--adicionar">Adicionar ao carrinho</small>
-                </div>
-                <div class = "item--box">
-                    <figure>
-                        <img src="assets/mascara.png" alt="Mask">   
-                        <figcaption>Imagem de uma mascara</figcaption>
-                    </figure>
-                    <button>Acessórios</button>
-                    <h3>Mask</h3>
-                    <p class="description">Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...</p>
-                    <p class="preço">R&dollar;40.00</p>
-                    <small class="botao--adicionar">Adicionar ao carrinho</small>
-                </div>
-                <div class = "item--box">
-                    <figure>
-                        <img src="assets/tShirt.png" alt="T-shirt">
-                        <figcaption>Imagem de uma camiseta</figcaption>
-                    </figure>
-                    <button>Camisetas</button>
-                    <h3>T-Shirt</h3>
-                    <p class="description">Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...</p>
-                    <p class="preço">R&dollar;100.00</p>
-                    <small class="botao--adicionar">Adicionar ao carrinho</small>
-                </div>
-                <div class = "item--box">
-                    <figure>
-                        <img src="assets/tShirtBranca.png" alt="Short-Sleeve T-Shirt">
-                        <figcaption>Imagem de uma camiseta branca</figcaption>
-                    </figure>
-                    <button>Camisetas</button>
-                    <h3>Short-Sleeve T-Shirt</h3>
-                    <p class="description">Agora você encontrou small camiseta básica do seu guarda-roupa. É feito de um mais grosso...</p>
-                    <p class="preço">R&dollar;100.00</p>
-                    <small class="botao--adicionar">Adicionar ao carrinho</small>
-                </div>
-                <div class = "item--box last">
-                    <figure>
-                        <img src="assets/jaqueta.png" alt="Champion Packable Jacket">
-                        <figcaption>Imagem de uma jaqueta</figcaption>
-                    </figure>
-                    <button>Camisetas</button>
-                    <h3>Champion Packable Jacket</h3>
-                    <p class="description">Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...</p>
-                    <p class="preço">R&dollar;100.00</p>
-                    <small class="botao--adicionar">Adicionar ao carrinho</small>
-                </div>
-           </section> 
+                
+           </section>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
