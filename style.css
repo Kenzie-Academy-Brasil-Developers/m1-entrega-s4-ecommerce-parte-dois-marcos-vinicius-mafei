@@ -8,6 +8,28 @@
     --grey50: #828282;
     --grey0:#F5F5F5;
 }
+@keyframes transicaoInicial {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes transicaoFinal {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.aparece{
+    animation: transicaoInicial 0.4s ease-in-out!important;
+}
+.desaparece{
+    animation: transicaoFinal 0.3s 0s ease-in-out!important;
+}
 body{
     font-family: 'Inter', sans-serif;
 }
@@ -124,6 +146,7 @@ aside .carrinho {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 aside button.btn--carrinho{
     margin-top: 10px;
@@ -151,10 +174,16 @@ aside button.btn--carrinho:hover{
 aside .carrinho div.carrinho--vazio{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 296px;
     height: 250px;
-    background-color: var(--grey0)
+    background-color: var(--grey0);
+    animation: transicaoInicial 0.4s ease-in-out;
+}
+aside .carrinho div.carrinho--vazio h2{
+    font-size: 22px;
+    font-weight:700;
 }
 aside .carrinho div.novo--carrinho{
     width: 296px;
@@ -166,16 +195,22 @@ aside .carrinho div.carrinho--container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    animation: transicaoInicial 0.4s ease-in-out;
 }
 aside .carrinho div.carrinho--card{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: flex-start;
     justify-content:space-around;
-    width: 273px;
+    width: 280px;
     height:80px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border:2px solid transparent;
+}
+aside .carrinho div.carrinho--card:hover{
+    border: 2px solid var(--primary);
 }
 aside .carrinho div.carrinho--card figure{
     display: flex;
@@ -189,15 +224,21 @@ aside .carrinho div.carrinho--card figure img{
     height: 53px;
 }
 aside .carrinho div.novo--carrinho h3{
-    margin-left: 0;
+    margin-left: 15px;
     font-size: 14px;
 }
 aside .carrinho div.novo--carrinho .remover{
     font-size:12px;
     color: var(--grey50);
+    width:fit-content;
+}
+aside .carrinho div.novo--carrinho .remover:hover{
+    color: var(--secondary);
+    cursor: pointer;
 }
 aside .carrinho div.novo--carrinho p{
     font-weight: normal;
+    margin-left: 15px;
     font-size:16px;
     color: var(--grey50);
 }
@@ -219,21 +260,23 @@ aside .carrinho div.info--carrinho{
     padding-right: 21px;
     padding-top:30px;
 }
+aside .carrinho div.info--carrinho div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 aside .carrinho div.info--carrinho p{
     margin-bottom: 32px;
+    display: inline-block;
 }
-aside .carrinho h2{
-    margin-top: 118px;
-    font-size:22px;
-    font-weight: bold;
-    color: var(--grey100);
+aside .carrinho div.info--carrinho p#total,p#quantidade{
+    color: var(--grey50);
 }
 aside .carrinho small{
     font-size: 14px;
     font-weight: normal;
     margin-top: 10px;
     color: var(--grey50);
-    margin-bottom: 176px;
     -webkit-transition: color 0.4s 0s ease-in-out;
     -moz-transition: color 0.4s 0s ease-in-out;
     -o-transition: color 0.4s 0s ease-in-out;

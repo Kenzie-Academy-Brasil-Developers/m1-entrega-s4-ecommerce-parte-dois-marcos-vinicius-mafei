@@ -16,19 +16,19 @@
         <h1>Weartake</h1>
         <nav>
             <ul>
-                <li class="first">Todos</li>
-                <li>Acessórios</li>
-                <li>Calçados</li>
-                <li class="last">Camisetas</li>
+                <li class="first filtra">Todos</li>
+                <li class="filtra">Acessórios</li>
+                <li class="filtra">Calçados</li>
+                <li class="last filtra">Camisetas</li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <aside>
-            <form action="#">
+            <form onsubmit="return false">
                 <label for="pesquisa">pesquisa</label>
                 <input name="pesquisa" type="text" placeholder="Digite aqui sua pesquisa">
-                <button type="submit">Pesquisar</button>
+                <button class='btn--primary'>Pesquisar</button>
             </form>
             <button class="btn--carrinho">Carrinho de compras</button>
             <section class="carrinho">
@@ -36,9 +36,15 @@
                     <h2>Carrinho vazio</h2>
                     <small class="botao--adicionar">Adicione itens</small>
                 </div>
-                <div class="info--carrinho">
-                    <p>Quantidade:</p>
-                    <p>Total:</p>
+                <div class="info--carrinho displayNone">
+                    <div>
+                        <p>Quantidade:</p>
+                        <p id = 'quantidade'></p>
+                    </div>
+                    <div>
+                        <p>Total:</p>
+                        <p id = 'total'></p>
+                    </div>
                 </div>
             </section>
         </aside>
