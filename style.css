@@ -190,8 +190,8 @@ aside .carrinho div.novo--carrinho{
     background-color: var(--grey0)
 }
 aside .carrinho div.carrinho--container{
-    width:275px;
-    padding-left: 20px;
+    width:265px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -225,7 +225,7 @@ aside .carrinho div.carrinho--card figure img{
 }
 aside .carrinho div.novo--carrinho h3{
     margin-left: 15px;
-    font-size: 14px;
+    font-size: 13px;
 }
 aside .carrinho div.novo--carrinho .remover{
     font-size:12px;
@@ -435,6 +435,14 @@ main section .item--box.last {
     }
     aside .carrinho div.novo--carrinho{
         width: 350px;
+    }
+    aside .carrinho div.carrinho--container{
+        width:275px;
+        padding-left: 20px;
+    }
+    
+    aside .carrinho div.novo--carrinho h3{
+        font-size: 14px;
     }
     aside .carrinho div.info--carrinho{
         width: 350px
